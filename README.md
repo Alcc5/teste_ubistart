@@ -22,121 +22,151 @@ npm i; npm start
 Os endPoints da collection do Postman e o dump do banco de dados estão na pasta _executar
 Com exceção do Sign-In e Sign-Up, todos os endPoints precisam de autenticação por JWT, que é inserida na aba 'Authorization', escolhendo a opção 'Bearer Token'
 
-Usuário Admin:{
+Usuário Admin:
+```nodejs
+{
     email: admin@admin.com
     password: "aaa123"
 }
+```
 
 ### EndPoints
 
 #### Authorization
 ##### Sign-Up
 POST localhost:3333/api/auth/sign-up<br>
-Body: 
+Body:
+```nodejs
 {
     "email": "string@email.com",
     "password": "string"
 }
-
+```
 ##### Sign-In
 POST localhost:3333/api/auth/sign-in<br>
-Body: 
+Body:
+```nodejs
 {
     "email": "string@email.com",
     "password": "string"
 }
+```
 #### TODOs
 ##### Listar
 GET localhost:3333/api/todos<br>
 Authorization: Bearer<br>
-Query String: {
+Query String: 
+```nodejs
+{
 page: integer (página atual da paginação)
 limit: integer (quantidade de registros por página)
 filter%5Batrasadas%5D: any (filtrar por atrasados)
-}<br>
+}
+```
 Exemplo: localhost:3333/api/todos?page=1&limit=10
 ##### Criar
 POST localhost:3333/api/todos<br>
 Authorization: Bearer<br>
-Body: 
+Body:
+```nodejs
 {
     "description": "string",
     "deadline": "datetime"
 }
-
+```
 ##### Visualizar
 GET localhost:3333/api/todos/:todoId<br>
 Authorization: Bearer<br>
 Query Params:
+```nodejs
 {
     todoId: string
 }
-
+```
 
 ##### Atualizar
 PUT localhost:3333/api/todos/:todoId<br>
 Authorization: Bearer<br>
 Query Params:
+```nodejs
 {
     todoId: string
-}<br>
-Body: {
+}
+```
+Body:
+```nodejs
+{
     "description": "string",
     "deadline": "datetime",
     "close": any
 }
+```
 
 ##### Deletar
 DELETE localhost:3333/api/todos/:todoId<br>
 Authorization: Bearer<br>
 Query Params:
+```nodejs
 {
     todoId: string
 }
+```
 #### Users
 ##### Listar
 GET localhost:3333/api/users<br>
 Authorization: Bearer<br>
-Query String: {
+Query String:
+```nodejs
+{
 page: integer (página atual da paginação)
 limit: integer (quantidade de registros por página)
 filter%5Bemail%5D: string (admin filtrar por email)
-}<br>
+}
+```
 Exemplo: localhost:3333/api/users?page=1&limit=10&filter%5Bemail%5D=teste999@teste.com
 ##### Criar
 POST localhost:3333/api/users<br>
 Authorization: Bearer<br>
-Body: 
+Body:
+```nodejs
 {
     "email": "teste2@teste.com",
     "password": "aaa123"
 }
+```
 
 ##### Visualizar
 GET localhost:3333/api/users/:userId<br>
 Authorization: Bearer<br>
 Query Params:
+```nodejs
 {
     userId: string
 }
-
+```
 
 ##### Atualizar
 PUT localhost:3333/api/users/:userId<br>
 Authorization: Bearer<br>
 Query Params:
+```nodejs
 {
     userId: string
-}<br>
+}
+```
+```nodejs
 Body: {
     "oldPassword": "string",
     "password": "string"
 }
+```
 
 ##### Deletar
 DELETE localhost:3333/api/users/:userId<br>
 Authorization: Bearer<br>
 Query Params:
+```nodejs
 {
     userId: string
 }
+```
