@@ -1,7 +1,6 @@
 # Teste Ubistart
 
 ## Tópicos
-=================
 <!--ts-->
 * [Executar](#Executar)
 * [Observações](#Observações)
@@ -12,7 +11,10 @@
 <!--te-->
 ## Executar
 
-Para executar o projeto, abra um terminal na raiz do projeto e execute os comandos abaixo
+Para executar o projeto, crie um banco de dados chamado "ubistart_dev".<br>
+Crie um usuário para esse banco, os dados estão em ".env" na raiz do projeto, MYSQL_USER e MYSQL_PASSWORD dizem respeito ao usuário e senha, respectivamente.<br>
+Importe de dentro da pasta "_executar" o dump com a estrutura das tabelas e os dados do MySQL.<br>
+Após isso, abra um terminal na raiz do projeto e execute os comandos abaixo
 ```nodejs
 npm i; npm start
 ```
