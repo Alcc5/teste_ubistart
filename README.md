@@ -63,7 +63,9 @@ limit: integer (quantidade de registros por página)
 filter%5Batrasadas%5D: any (filtrar por atrasados)
 }
 ```
-Exemplo: localhost:3333/api/todos?page=1&limit=10
+Exemplos:<br>
+localhost:3333/api/todos?page=1&limit=10<br>
+localhost:3333/api/todos?page=1&limit=10&filter%5Batrasadas%5D=sim
 ##### Criar
 POST localhost:3333/api/todos<br>
 Authorization: Bearer<br>
