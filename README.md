@@ -29,7 +29,7 @@ Usuário Admin:{
 
 #### Authorization
 ##### Sign-Up
-POST localhost:3333/api/auth/sign-up
+POST localhost:3333/api/auth/sign-up<br>
 Body: 
 {
     "email": "string@email.com",
@@ -37,7 +37,7 @@ Body:
 }
 
 ##### Sign-In
-POST localhost:3333/api/auth/sign-in
+POST localhost:3333/api/auth/sign-in<br>
 Body: 
 {
     "email": "string@email.com",
@@ -45,17 +45,17 @@ Body:
 }
 #### TODOs
 ##### Listar
-GET localhost:3333/api/todos
-Authorization: Bearer
+GET localhost:3333/api/todos<br>
+Authorization: Bearer<br>
 Query String: {
 page: integer (página atual da paginação)
 limit: integer (quantidade de registros por página)
 filter%5Batrasadas%5D: any (filtrar por atrasados)
-}
+}<br>
 Exemplo: localhost:3333/api/todos?page=1&limit=10
 ##### Criar
-POST localhost:3333/api/todos
-Authorization: Bearer
+POST localhost:3333/api/todos<br>
+Authorization: Bearer<br>
 Body: 
 {
     "description": "string",
@@ -63,8 +63,8 @@ Body:
 }
 
 ##### Visualizar
-GET localhost:3333/api/todos/:todoId
-Authorization: Bearer
+GET localhost:3333/api/todos/:todoId<br>
+Authorization: Bearer<br>
 Query Params:
 {
     todoId: string
@@ -72,12 +72,12 @@ Query Params:
 
 
 ##### Atualizar
-PUT localhost:3333/api/todos/:todoId
-Authorization: Bearer
+PUT localhost:3333/api/todos/:todoId<br>
+Authorization: Bearer<br>
 Query Params:
 {
     todoId: string
-}
+}<br>
 Body: {
     "description": "string",
     "deadline": "datetime",
@@ -85,25 +85,25 @@ Body: {
 }
 
 ##### Deletar
-DELETE localhost:3333/api/todos/:todoId
-Authorization: Bearer
+DELETE localhost:3333/api/todos/:todoId<br>
+Authorization: Bearer<br>
 Query Params:
 {
     todoId: string
 }
 #### Users
 ##### Listar
-GET localhost:3333/api/users
-Authorization: Bearer
+GET localhost:3333/api/users<br>
+Authorization: Bearer<br>
 Query String: {
 page: integer (página atual da paginação)
 limit: integer (quantidade de registros por página)
 filter%5Bemail%5D: string (admin filtrar por email)
-}
+}<br>
 Exemplo: localhost:3333/api/users?page=1&limit=10&filter%5Bemail%5D=teste999@teste.com
 ##### Criar
-POST localhost:3333/api/users
-Authorization: Bearer
+POST localhost:3333/api/users<br>
+Authorization: Bearer<br>
 Body: 
 {
     "email": "teste2@teste.com",
@@ -111,8 +111,8 @@ Body:
 }
 
 ##### Visualizar
-GET localhost:3333/api/users/:userId
-Authorization: Bearer
+GET localhost:3333/api/users/:userId<br>
+Authorization: Bearer<br>
 Query Params:
 {
     userId: string
@@ -120,20 +120,20 @@ Query Params:
 
 
 ##### Atualizar
-PUT localhost:3333/api/users/:userId
-Authorization: Bearer
+PUT localhost:3333/api/users/:userId<br>
+Authorization: Bearer<br>
 Query Params:
 {
     userId: string
-}
+}<br>
 Body: {
     "oldPassword": "string",
     "password": "string"
 }
 
 ##### Deletar
-DELETE localhost:3333/api/users/:userId
-Authorization: Bearer
+DELETE localhost:3333/api/users/:userId<br>
+Authorization: Bearer<br>
 Query Params:
 {
     userId: string
