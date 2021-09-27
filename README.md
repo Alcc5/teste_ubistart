@@ -58,9 +58,9 @@ Authorization: Bearer<br>
 Query String: 
 ```nodejs
 {
-page: integer (página atual da paginação)
-limit: integer (quantidade de registros por página)
-filter%5Batrasadas%5D: any (filtrar por atrasados)
+    page: integer (página atual da paginação)
+    limit: integer (quantidade de registros por página)
+    filter%5Batrasadas%5D: any (filtrar por atrasados)
 }
 ```
 Exemplos:<br>
@@ -120,9 +120,9 @@ Authorization: Bearer<br>
 Query String:
 ```nodejs
 {
-page: integer (página atual da paginação)
-limit: integer (quantidade de registros por página)
-filter%5Bemail%5D: string (admin filtrar por email)
+    page: integer (página atual da paginação)
+    limit: integer (quantidade de registros por página)
+    filter%5Bemail%5D: string (admin filtrar por email)
 }
 ```
 Exemplo: localhost:3333/api/users?page=1&limit=10&filter%5Bemail%5D=teste999@teste.com
@@ -156,8 +156,9 @@ Query Params:
     userId: string
 }
 ```
+Body:
 ```nodejs
-Body: {
+{
     "oldPassword": "string",
     "password": "string"
 }
