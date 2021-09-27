@@ -1,0 +1,467 @@
+{
+	"info": {
+		"_postman_id": "c0b09337-6482-4095-9f20-698747d2ae93",
+		"name": "Ubistart",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Todos",
+			"item": [
+				{
+					"name": "Index",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQyZjQ4NmQwLTgxMmQtNDUwNS1hZDFjLWU4YzgxNTFlNDQxZCIsImlhdCI6MTYzMjY5NjkxNywiZXhwIjoxNjMzMzAxNzE3fQ.H_HH881gU2eg4RPqheYeAfU8mViCIBxY8xuLdCEN3q4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3333/api/todos?page=1&limit=10",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"todos"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "filter%5Batrasadas%5D",
+									"value": "sim",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQyZjQ4NmQwLTgxMmQtNDUwNS1hZDFjLWU4YzgxNTFlNDQxZCIsImlhdCI6MTYzMjUxNTE0MiwiZXhwIjoxNjMzMTE5OTQyfQ.OaO2nj765b3yy5D_0xMBn9zbZO8OfQi-Ds4z6YYgl90",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"descricao do teste\",\r\n    \"deadline\": \"2021-09-27\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3333/api/todos",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQyZjQ4NmQwLTgxMmQtNDUwNS1hZDFjLWU4YzgxNTFlNDQxZCIsImlhdCI6MTYzMjY5NjkxNywiZXhwIjoxNjMzMzAxNzE3fQ.H_HH881gU2eg4RPqheYeAfU8mViCIBxY8xuLdCEN3q4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3333/api/todos/4984292d-b6a1-46ac-bd5d-f6e4eacc4ab4",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"todos",
+								"4984292d-b6a1-46ac-bd5d-f6e4eacc4ab4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQyZjQ4NmQwLTgxMmQtNDUwNS1hZDFjLWU4YzgxNTFlNDQxZCIsImlhdCI6MTYzMjY5NjkxNywiZXhwIjoxNjMzMzAxNzE3fQ.H_HH881gU2eg4RPqheYeAfU8mViCIBxY8xuLdCEN3q4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"descricao do teste atualizada\",\r\n    \"deadline\": \"2021-09-28\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3333/api/todos/4984292d-b6a1-46ac-bd5d-f6e4eacc4ab4",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"todos",
+								"4984292d-b6a1-46ac-bd5d-f6e4eacc4ab4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQyZjQ4NmQwLTgxMmQtNDUwNS1hZDFjLWU4YzgxNTFlNDQxZCIsImlhdCI6MTYzMjY5NjkxNywiZXhwIjoxNjMzMzAxNzE3fQ.H_HH881gU2eg4RPqheYeAfU8mViCIBxY8xuLdCEN3q4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3333/api/todos/c943bf4e-8221-49e2-bf00-136448e4dea5",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"todos",
+								"c943bf4e-8221-49e2-bf00-136448e4dea5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Index",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQyZjQ4NmQwLTgxMmQtNDUwNS1hZDFjLWU4YzgxNTFlNDQxZCIsImlhdCI6MTYzMjY5NjkxNywiZXhwIjoxNjMzMzAxNzE3fQ.H_HH881gU2eg4RPqheYeAfU8mViCIBxY8xuLdCEN3q4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3333/api/users?page=1&limit=10&filter%5Bemail%5D=teste999@teste.com",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "filter%5Bemail%5D",
+									"value": "teste999@teste.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQyZjQ4NmQwLTgxMmQtNDUwNS1hZDFjLWU4YzgxNTFlNDQxZCIsImlhdCI6MTYzMjUxNTE0MiwiZXhwIjoxNjMzMTE5OTQyfQ.OaO2nj765b3yy5D_0xMBn9zbZO8OfQi-Ds4z6YYgl90",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"teste2@teste.com\",\r\n    \"password\": \"aaa123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3333/api/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQyZjQ4NmQwLTgxMmQtNDUwNS1hZDFjLWU4YzgxNTFlNDQxZCIsImlhdCI6MTYzMjUxNTE0MiwiZXhwIjoxNjMzMTE5OTQyfQ.OaO2nj765b3yy5D_0xMBn9zbZO8OfQi-Ds4z6YYgl90",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3333/api/users/42f486d0-812d-4505-ad1c-e8c8151e441d",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"users",
+								"42f486d0-812d-4505-ad1c-e8c8151e441d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQyZjQ4NmQwLTgxMmQtNDUwNS1hZDFjLWU4YzgxNTFlNDQxZCIsImlhdCI6MTYzMjY5NjkxNywiZXhwIjoxNjMzMzAxNzE3fQ.H_HH881gU2eg4RPqheYeAfU8mViCIBxY8xuLdCEN3q4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldPassword\": \"bbb123\",\r\n    \"password\": \"aaa123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3333/api/users/42f486d0-812d-4505-ad1c-e8c8151e441d",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"users",
+								"42f486d0-812d-4505-ad1c-e8c8151e441d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQyZjQ4NmQwLTgxMmQtNDUwNS1hZDFjLWU4YzgxNTFlNDQxZCIsImlhdCI6MTYzMjY5NjkxNywiZXhwIjoxNjMzMzAxNzE3fQ.H_HH881gU2eg4RPqheYeAfU8mViCIBxY8xuLdCEN3q4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3333/api/users/cd16a57e-2d1b-4dce-aa58-bdf9952f41e5",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"users",
+								"cd16a57e-2d1b-4dce-aa58-bdf9952f41e5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"admin@admin.com\",\r\n    \"password\": \"aaa123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3333/api/auth/sign-up",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"api",
+						"auth",
+						"sign-up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SignIn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"teste999@teste.com\",\r\n    \"password\": \"aaa123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3333/api/auth/sign-in",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"api",
+						"auth",
+						"sign-in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SignIn Admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"admin@admin.com\",\r\n    \"password\": \"aaa123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3333/api/auth/sign-in",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"api",
+						"auth",
+						"sign-in"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
